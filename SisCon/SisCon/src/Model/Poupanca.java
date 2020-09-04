@@ -12,6 +12,10 @@ package Model;
 public class Poupanca extends Banco{
     private int aniversario;
     
+    public Poupanca(String nome){
+        super(nome);
+    }
+    
     public void calcularRendimento(){
         
     }   

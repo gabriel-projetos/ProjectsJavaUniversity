@@ -12,6 +12,12 @@ package Model;
 public class Banco extends ContaCorrente{
     private String agencia;
     private int numero;
+    
+    public Banco(String nome){
+        super(nome);
+        setAgencia(agencia);
+        setNumero(numero);
+    }
 
     public String getAgencia() {
         return agencia;

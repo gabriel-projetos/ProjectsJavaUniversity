@@ -12,6 +12,12 @@ package Model;
 public class ContaCorrente extends Conta{
     private double limite;
     
+    public ContaCorrente(String nome){
+        super(nome);
+        setAgencia(agencia);
+        setNumero(numero);
+    }
+    
     public void pagar(){
         
     }

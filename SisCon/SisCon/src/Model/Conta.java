@@ -13,8 +13,17 @@ public class Conta {
     private String nome;
     private double saldo;
     
+    public Conta(String nome){
+        setNome(nome);
+    }
+    
     public void setNome(String AValue){
-        this.nome = AValue;
+        if(AValue.length() >= 5){
+            this.nome = AValue;  
+        }else{
+            //Exceção de argumento ilegal
+            throw new IllegalArgumentException("Nome deve ter mais que 5 caracteres");
+        }
     }
     
     public String getNome(){
@@ -37,7 +46,11 @@ public class Conta {
         
     }
     
-    public void Depositas(){
-        
+    public void Depositar(double valor){
+        if(valor > 0){
+            this.saldo += valor;
+        }else{
+            throw new IllegalArgumentException("Valor do deposito deve ser maior que zero!");
+        }
     }
 }
